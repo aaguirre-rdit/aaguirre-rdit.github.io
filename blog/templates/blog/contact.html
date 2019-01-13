@@ -1,0 +1,35 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="contact row">
+        <div class="col-sm-4 col-md-offset-1">
+            <div class="panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Contact Me!</h3>
+                </div>
+                <div class="panel panel-body">
+                    <form role="form">
+                        <div class="col-xs-12">
+			    					<div class="form-group">
+			                <input type="text" name="name" id="contactName" class="form-control input-md" placeholder="Your name" required>
+                                    </div>
+
+                            <div class="form-group">
+                                <input type="email" name="email" id="contactEmail" class="form-control input-md" placeholder="Your email address" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="txtMsg" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;overflow-y: scroll;"></textarea>
+                            </div>
+                            </div>
+                        <input type="submit" value="Send" class="btn btn-info btn-block">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-6">
+            <h4>This will me a map</h4>
+
+        </div>
+    </div>
+{% endblock %}

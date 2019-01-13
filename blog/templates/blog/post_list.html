@@ -1,15 +1,21 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-
+<div class="col-sm-2 filter-panel">
+        Filter section
+    </div>
 {% for post in posts %}
-<div class="post">
+
+<div class="post col-sm-8 col-sm-offset-1">
     <div class="date">
         <p>published: {{ post.published_date }}</p>
     </div>
     <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+    <span class="badge" style="background-color:{{post.category.color}};">{{post.category}}</span>
+    <p class="markdown-content">{{ post.text|linebreaksbr|truncatewords:"50" }}</p>
 
-    <p>{{ post.text|linebreaksbr }}</p>
 </div>
+
+
 {% endfor %}
 {% endblock %}

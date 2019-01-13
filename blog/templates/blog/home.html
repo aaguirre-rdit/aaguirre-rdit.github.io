@@ -1,0 +1,43 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class="container-fluid col-sm-8 col-sm-offset-2">
+    <div class="type-js-1 headline">
+    <h1 class="text-js-1">Hi!</h1>
+    <h2 class="text-js-2">This is Anne, software developer and cat enthusiast</h2>
+    </div>
+    </div>
+<script>
+    function autoType(elementClass,itemNum, typingSpeed){
+  var thhis = $(elementClass);
+  thhis.css({
+    "position": "relative",
+    "display": "inline-block"
+  });
+  thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+  thhis = thhis.find(".text-js-"+itemNum);
+  var text = thhis.text().trim().split('');
+  var amntOfChars = text.length;
+  var newString = "";
+  thhis.text("|");
+  setTimeout(function(){
+    thhis.css("opacity",1);
+    thhis.prev().removeAttr("style");
+    thhis.text("");
+    for(var i = 0; i < amntOfChars; i++){
+      (function(i,char){
+        setTimeout(function() {
+          newString += char;
+          thhis.text(newString);
+        },i*typingSpeed);
+      })(i+1,text[i]);
+    }
+  },1500);
+}
+
+$(document).ready(function(){
+  setTimeout(()=>autoType(".type-js-1",1,100),1);
+  setTimeout(()=>autoType(".type-js-1",2,150),3);
+  //autoType(".type-js-1",1,100);
+});
+</script>
+{% endblock %}
