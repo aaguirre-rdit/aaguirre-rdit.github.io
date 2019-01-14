@@ -1,21 +1,41 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-<div class="col-sm-2 filter-panel">
-        Filter section
+<div class="row">
+<div class="col-md-2 filter-panel hidden-xs-up">
+    <div class="filter">
+        {% for category in categorys %}
+            <h5> category.title</h5>
+        {% endfor %}
     </div>
-{% for post in posts %}
-
-<div class="post col-sm-8 col-sm-offset-1">
+</div>
+<div class="post col-12 col-md-8 mx-auto">
+    {% for post in posts reversed %}
     <div class="date">
         <p>published: {{ post.published_date }}</p>
     </div>
     <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
     <span class="badge" style="background-color:{{post.category.color}};">{{post.category}}</span>
     <p class="markdown-content">{{ post.text|linebreaksbr|truncatewords:"50" }}</p>
-
+    {% endfor %}
+    <div>
+        <ul class="pagination">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </div>
+</div>
 </div>
 
 
-{% endfor %}
+
 {% endblock %}

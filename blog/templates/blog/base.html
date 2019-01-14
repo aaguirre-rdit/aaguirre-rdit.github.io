@@ -10,51 +10,41 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+
+
+        <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet">
+
         <link rel="stylesheet" href="{% static 'css/nucleo-icons.css' %}">
         <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
+        <link rel="stylesheet" href="{% static 'css/blk-design-system.css' %}">
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     </head>
     <body>
-        <nav class="navbar">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid col-md-10 col-md-offset-1">
                 <div class="navbar-header ">
                     <a class="navbar-brand" href="/" ><img id='logo' src="{% static 'img/aa.png' %}" /></a>
                 </div>
-                <ul class="nav navbar-nav">
-                    <li><a href="/about">Who am I?</a></li>
-                    <li><a href="/posts">Blog</a></li>
-                    <li><a href="/projects">Projects</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
-                <ul class=" nav navbar-nav nav-flex-icons nav-right">
-                        <li class="nav-item">
-                            <a class="nav-link waves-effect waves-light" href="https://github.com/aaguirre-rdit" target="_blank"> <i class="fab fa-github" id="nav-git"></i></a>
-                        </li>
+                <ul class="nav navbar-dark">
+                    <li class="nav-item"><a class="nav-link" href="/about">Who am I?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/posts">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
-        <div class="">
-    <div class="row">
-        <div class="container-fluid">
+        <div class="wrapper">
+    <div>
             {% block content %}
             {% endblock %}
-        </div>
     </div>
 </div>
             <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 
     <script>
-                $(document).ready(()=>{
+                $(document).ready(() => {
                 var converter = new showdown.Converter();
                 let mContents = document.getElementsByClassName('markdown-content');
                 for (var content of mContents){
@@ -64,6 +54,17 @@
                 }
              })
             </script>
+        <!-- Core -->
+        <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+        <script src="{% static 'js/core/jquery.min.js' %}"></script>
+        <script src="{% static 'js/core/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/core/popper.min.js' %}"></script>
+        <script src="{% static 'js/core/jquery.waypoints.js' %}"></script>
+        <script src="{% static 'js/animations.js' %}"></script>
 
+
+
+        <!-- BLK• JS -->
+        <script src="{% static 'js/blk-design-system.js' %}"></script>
     </body>
 </html>

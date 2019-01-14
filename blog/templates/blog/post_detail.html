@@ -1,12 +1,17 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 {% block content %}
-    <div class="col-sm-2">
-        Filter section
-    </div>
-    <div class="post col-sm-8 col-sm-offset-1">
+
+    <div class="post col-12 col-sm-10 col-md-8 mx-auto">
+        <nav aria-label="breadcrumb" role="navigation">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item" aria-current="page">All</li>
+                <li class="breadcrumb-item" aria-current="page">{{post.category}}</li>
+                <li class="breadcrumb-item active" aria-current="page">{{post.title}}</li>
+            </ol>
+        </nav>
         {% if post.image %}
-        <img class='post-banner img-fluid' src={{ post.image.url }}/>
+        <img class='post-banner img-fluid mx-auto' src={{ post.image.url }}/>
         {% endif %}
         {% if post.published_date %}
 

@@ -1,11 +1,118 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-<div class="container-fluid col-sm-8 col-sm-offset-2">
-    <div class="type-js-1 headline">
-    <h1 class="text-js-1">Hi!</h1>
-    <h2 class="text-js-2">This is Anne, software developer and cat enthusiast</h2>
+<div>
+<div class="landing-greet">
+<div class="container-fluid  col-sm-8 col-sm-offset-2 landing-cons">
+    <blockquote class="type-js-1 col-12 blockquote blockquote-primary bg-default rounded">
+    <h2 class="text-neutral">> <span class="text-js-1">Hi!</span></h2>
+        <h4 class="text-neutral">>   <span class="text-js-2">This is Anne, software developer and cat enthusiast</span></h4>
+    </blockquote>
     </div>
+
+</div>
+    <div class="after-landing float-right col-10 col-md-6">
+        <div class="float-right animated-element">
+        <h2 class="text text-primary text-right">Welcome</h2>
+        <p class="text-neutral text-right"> Welcome to my portfolio website. I am a software developer currently living in Seoul, South Korea.</p>
+        </div>
     </div>
+    <div class="my-2">
+        <div class="my-motto">
+            <h2 class="text text-center text-primary">My motto?</h2>
+            <h4 class="text text-center text-primary animated animated-element">Passion,</h4>
+            <h4 class="text text-center text-primary animated animated-element">hackery,</h4>
+            <h4 class="text text-center text-primary animated animated-element">and a cup of coffee</h4>
+        </div>
+        <hr class="mx-auto"/>
+        <div class="cool-stuff">
+            <h2 class="text text-primary">Cool Stuff I do</h2>
+            <div class="row card-deck d-flex justify-content-around">
+                <div class="col-5 col-md-2 card card rounded text-center text-success p-4 card-coin">
+                    <i class="tim-icons icon-laptop icon-success cool-icon"></i>
+                    <p>Web development</p>
+                </div>
+                <div class="col-5 col-md-2 card card rounded text-center text-success p-4 card-coin">
+                    <i class="tim-icons icon-coins icon-success cool-icon"></i>
+                    <p>Server programming</p>
+                </div>
+                <div class="col-5 col-md-2 card card rounded text-center text-success p-4 card-coin">
+                    <i class="tim-icons icon-cloud-upload-94 icon-success cool-icon"></i>
+                    <p>Cloud computing</p>
+                </div>
+                <div class="col-5 col-md-2 card card rounded text-center text-success p-4 card-coin">
+                    <i class="tim-icons icon-atom icon-success cool-icon"></i>
+                    <p>Scientific Computing</p>
+                </div>
+            </div>
+        </div>
+        <div class="my-stack">
+
+            <h2 class="text text-right text-primary">My Stack</h2>
+            <div class="d-flex justify-content-md-between">
+            <div class="col-sm-5 col-xs-10">.</div>
+            <div class="col-sm-5 col-xs-10">
+            <div class="progress-container progress-danger ">
+                <span class="progress-badge text-center">Javascript</span>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+                        <span class="progress-value">70%</span>
+                    </div>
+                </div>
+            </div>
+                <div class="progress-container progress-info">
+                    <span class="progress-badge text-center">ReactJS</span>
+                    <div class="progress ">
+                        <div class="progress-bar " role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                            <span class="progress-value">80%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-container progress-success">
+                    <span class="progress-badge text-center">NodeJS</span>
+                    <div class="progress ">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+                            <span class="progress-value">70%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-container progress-primary">
+                    <span class="progress-badge text-center">Python</span>
+                    <div class="progress ">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+                            <span class="progress-value">85%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-container progress-danger">
+                    <span class="progress-badge text-center">Django</span>
+                    <div class="progress ">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+                            <span class="progress-value">70%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-container progress-warning">
+                    <span class="progress-badge text-center">AWS</span>
+                    <div class="progress ">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%;">
+                            <span class="progress-value">65%</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="look-projs">
+            <h3>
+                Take a look at some <a class="animated-element pulse" href="projects">cool projects</a> I have done!
+            </h3>
+        </div>
+        <div class="kind-words">
+            <h3 class="text text-center">Some kind words from amazing people</h3>
+        </div>
+    </div>
+</div>
+
 <script>
     function autoType(elementClass,itemNum, typingSpeed){
   var thhis = $(elementClass);
