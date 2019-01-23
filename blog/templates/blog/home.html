@@ -1,8 +1,8 @@
 {% extends 'blog/base.html' %}
 {% block content %}
 <div>
-<div class="landing-greet">
-<div class="container-fluid  col-sm-8 col-sm-offset-2 landing-cons">
+<div class="landing-greet mw-100">
+<div class="container-fluid col-sm-8 col-sm-offset-2 landing-cons">
     <blockquote class="type-js-1 col-12 blockquote blockquote-primary bg-default rounded">
     <h2 class="text-neutral">> <span class="text-js-1">Hi!</span></h2>
         <h4 class="text-neutral">>   <span class="text-js-2">This is Anne, software developer and cat enthusiast</span></h4>
@@ -10,7 +10,7 @@
     </div>
 
 </div>
-    <div class="after-landing float-right col-10 col-md-6">
+    <div class="after-landing mw-100 float-right col-10 col-md-6">
         <div class="float-right animated-element">
         <h2 class="text text-primary text-right">Welcome</h2>
         <p class="text-neutral text-right"> Welcome to my portfolio website. I am a software developer currently living in Seoul, South Korea.</p>
@@ -26,7 +26,7 @@
         <hr class="mx-auto"/>
         <div class="cool-stuff">
             <h2 class="text text-primary">Cool Stuff I do</h2>
-            <div class="row card-deck d-flex justify-content-around">
+            <div class="row mw-100 card-deck d-flex justify-content-around">
                 <div class="col-5 col-md-2 card card rounded text-center text-success p-4 card-coin">
                     <i class="tim-icons icon-laptop icon-success cool-icon"></i>
                     <p>Web development</p>
@@ -103,12 +103,36 @@
             </div>
         </div>
         <div class="look-projs">
-            <h3>
+            <h3 class="text-neutral">
                 Take a look at some <a class="animated-element pulse" href="projects">cool projects</a> I have done!
             </h3>
         </div>
         <div class="kind-words">
-            <h3 class="text text-center">Some kind words from amazing people</h3>
+            <h3 class="text text-center text-neutral">Some kind words from amazing people</h3>
+            <div class="recomm-slider">
+
+            </div>
+        </div>
+        <div class="to-about mx-auto"><a href="about">
+            <div class="col-10 col-sm-6 rounded">
+                <h1 class="text text-neutral">Still <span class="text-danger">curious</span>?</h1>
+                <button class="btn btn-round p-4" >
+                    <i class="tim-icons tim-icons-bg-circle tim-icons-32 bg-transparent btn-outline-danger icon-single-02 my-3"></i>
+                    <h5>Know more...</h5>
+                </button>
+            </div>
+        </a>
+            </div>
+        <div class="to-about"><a href="contact">
+            <div class="col-10 col-sm-6 rounded mx-auto">
+                <h1 class="text text-neutral">Wanna work <span class="text-info">together</span>?</h1>
+                <button class="btn btn-round btn-info p-4 mx-auto" >
+                    <i class="tim-icons tim-icons-16 icon-send my-3"></i>
+                    <h5>Drop me a message</h5>
+                </button>
+            </div>
+        </a>
+        </div>
         </div>
     </div>
 </div>

@@ -1,12 +1,16 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-<div class="row">
-<div class="col-md-2 filter-panel hidden-xs-up">
-    <div class="filter">
-        {% for category in categorys %}
-            <h5> category.title</h5>
-        {% endfor %}
+<div class="row w-100">
+<div class="col-md-2 filter-panel">
+    <div class="filter-category">
+        <label class="text text-primary">Filter by Category</label>
+        <select class="selectPicker bg-default text-primary">
+            {% for category in categories %}
+            <option class="bg-default"> {{category.title}}</option>
+            {% endfor %}
+        </select>
+
     </div>
 </div>
 <div class="post col-12 col-md-8 mx-auto">
@@ -15,7 +19,7 @@
         <p>published: {{ post.published_date }}</p>
     </div>
     <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-    <span class="badge" style="background-color:{{post.category.color}};">{{post.category}}</span>
+    <span class="badge text-neutral" style="background-color:{{post.category.color}};">{{post.category}}</span>
     <p class="markdown-content">{{ post.text|linebreaksbr|truncatewords:"50" }}</p>
     {% endfor %}
     <div>

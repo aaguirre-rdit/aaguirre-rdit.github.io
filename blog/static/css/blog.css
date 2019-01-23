@@ -1,4 +1,6 @@
-
+.navbar {
+    box-shadow: 1px 1px 5px black;
+}
 .navbar * {
     color:white;
     flex-direction: row;
@@ -14,7 +16,10 @@
 .navbar-nav li a:active {
     color:white;
 }
-
+nav li>*:hover {
+    color:white;
+    text-shadow:1px 2px 3px rebeccapurple;
+}
 .header-name{
     font-family: Helvetica;
     font-size:30px;
@@ -62,12 +67,19 @@ span.badge{
     font-size: 26pt;
     margin-right: 20px;
 }
-
+.markdown-content img{
+    max-width:100%;
+}
 .post {
     margin-bottom: 70px;
 }
+.markdown-content pre {
+    background-color:#525f7f;
+    border-radius: 5px;
+}
 .post p {
     text-align: justify;
+
 }
 .post h1 a, .post h1 a:visited {
     color: #000000;
@@ -152,4 +164,25 @@ span.badge{
 }
 .my-stack{
     padding:10%;
+}
+
+
+
+
+
+
+.map-wrapper {
+    width: 100vw;
+    height: 100vh;
+    position:fixed;
+    z-index:0;
+}
+.map {
+    height:unset;
+    z-index:0;
+    width:100vw;
+}
+.contact-panel {
+    z-index:10;
+    box-shadow: 1px -1px 10px lightgray;
 }
