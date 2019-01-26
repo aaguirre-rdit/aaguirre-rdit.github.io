@@ -8,9 +8,9 @@ from .forms import ContactForm
 
 # Create your views here.
 def post_list(request):
-    postlist = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    postlist = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date').reverse()
     categories = Category.objects.filter()
-    paginator = Paginator(postlist, 2)  # Show 10 contacts per page
+    paginator = Paginator(postlist, 5)  # Show 5 contacts per page
     page = request.GET.get('page')
     posts = paginator.get_page(page)
     return render(request, 'blog/post_list.html', {'posts':posts, 'categories':categories})
