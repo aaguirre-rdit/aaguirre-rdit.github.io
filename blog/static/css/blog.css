@@ -168,8 +168,9 @@ span.badge{
 
 
 
-
-
+h1 {
+    color:white;
+}
 
 .map-wrapper {
     width: 100vw;
